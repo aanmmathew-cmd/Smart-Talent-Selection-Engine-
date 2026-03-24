@@ -53,14 +53,11 @@ for c in candidates:
 
     results.append((c["name"], score, level))
 
-# Sorting
 results.sort(key=lambda x: x[1], reverse=True)
 
-# Display
 for i, (name, score, level) in enumerate(results, start=1):
     print(f"{i}. {name} - Score: {score:.2f}% - {level}")
 
-# Safe check
 if results:
     print("\nTop Candidate:", results[0][0])
 else:
